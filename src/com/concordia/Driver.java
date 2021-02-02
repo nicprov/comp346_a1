@@ -5,6 +5,8 @@ package com.concordia;
  * and open the template in the editor.
  */
 
+import java.util.concurrent.TimeUnit;
+
 /**
  *
  * @author Kerly Titus
@@ -15,19 +17,18 @@ public class Driver {
      * main class
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-    	
-    	 /*******************************************************************************************************************************************
-    	  * TODO : implement all the operations of main class   																					*
-    	  ******************************************************************************************************************************************/
-        
-    	Network objNetwork = new Network("network");            /* Activate the network */
-        objNetwork.run();
-        Server objServer = new Server();                        /* Start the server */ 
-        objServer.run();
-        Client objClient1 = new Client("sending");              /* Start the sending client */
-        objClient1.run();
-        Client objClient2 = new Client("receiving");            /* Start the receiving client */
-        objClient2.run();
+    public static void main(String[] args) throws InterruptedException {
+
+        Network objNetwork = new Network("network");
+        objNetwork.start();
+
+        Server objServer = new Server();
+        objServer.start();
+
+        Client objClient1 = new Client("sending");
+        objClient1.start();
+
+        Client objClient2 = new Client("receiving");
+        objClient2.start();
     }
 }

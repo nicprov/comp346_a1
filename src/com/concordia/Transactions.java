@@ -10,21 +10,20 @@ package com.concordia;
  * @author Kerly Titus
  */
 public class Transactions {
-    
+
     private String accountNumber;       /* Account number */
     private String operationType;       /* Operation type : deposit, withdrawal, query */
     private double transactionAmount;   /* Amount to deposit or withdraw */
     private double transactionBalance;  /* Account balance after transaction */
     private String transactionError;    /* Transaction error : NSF, invalid amount, invalind account, none */
     private String transactionStatus;   /* Current transaction status : pending, sent, received, transferred, done */
-    
+
     /** Constructor method of Transactions class
-         * 
-         * @return
-         * @param
-         */
-    Transactions()
-    {
+     *
+     * @return
+     * @param
+     */
+    Transactions() {
         accountNumber = " ";
         operationType = " ";
         transactionAmount = 0.00;
@@ -32,148 +31,146 @@ public class Transactions {
         transactionError = "none";
         transactionStatus = " ";
     }
-    
-     /**
-      *  Accessor method of Transactions class
-     * 
+
+    /**
+     *  Accessor method of Transactions class
+     *
      * @return accountNumber
      * @param
      */
-     public String getAccountNumber()
+    public String getAccountNumber()
      {
          return accountNumber;
      }
-         
+
     /**
      *  Mutator method of Transactions class
-     * 
-     * @return 
+     *
+     * @return
      * @param accNumber
      */
-     public void setAccountNumber(String accNumber)
-     { 
+    public void setAccountNumber(String accNumber)
+     {
          accountNumber = accNumber;
      }
-     
+
     /**
      *  Accessor method of Transactions class
-     * 
+     *
      * @return operationType
      * @param
      */
-     public String getOperationType()
+    public String getOperationType()
      {
          return operationType;
      }
-         
+
     /**
      *  Mutator method of Transactions class
-     * 
-     * @return 
+     *
+     * @return
      * @param opType
      */
-     public void setOperationType(String opType)
-     { 
+    public void setOperationType(String opType)
+     {
          operationType = opType;
      }
-     
+
     /**
      *  Accessor method of Transactions class
-     * 
+     *
      * @return transactionAmount
      * @param
      */
-     public double getTransactionAmount()
+    public double getTransactionAmount()
      {
          return transactionAmount;
      }
-         
+
     /**
      *  Mutator method of Transactions class
-     * 
-     * @return 
-     * @param transmount
+     *
+     * @return
+     * @param transAmount
      */
-     public void setTransactionAmount(double transAmount)
-     { 
+    public void setTransactionAmount(double transAmount)
+     {
          transactionAmount = transAmount;
      }
-     
+
     /**
      *  Accessor method of Transactions class
-     * 
+     *
      * @return transactionBalance
      * @param
      */
-     public double getTransactionBalance()
+    public double getTransactionBalance()
      {
          return transactionBalance;
      }
-         
+
     /**
      *  Mutator method of Transactions class
-     * 
-     * @return 
+     *
+     * @return
      * @param transBalance
      */
-     public void setTransactionBalance(double transBalance)
-     { 
+    public void setTransactionBalance(double transBalance)
+     {
          transactionBalance = transBalance;
      }
-     
+
     /**
      *  Accessor method of Transactions class
-     * 
+     *
      * @return transactionError
      * @param
      */
-     public String getTransactionError()
+    public String getTransactionError()
      {
          return transactionError;
      }
-     
-    /** 
+
+    /**
      * Mutator method of Transactions class
-     * 
-     * @return 
+     *
+     * @return
      * @param transError
      */
-     public void setTransactionError(String transError)
-     { 
+    public void setTransactionError(String transError)
+     {
          transactionError = transError;
      }
-     
+
     /**
      *  Accessor method of Transactions class
-     * 
+     *
      * @return transactionStatus
      * @param
      */
-     public String getTransactionStatus()
+    public String getTransactionStatus()
      {
          return transactionStatus;
      }
-     
+
     /**
      *  Mutator method of Transactions class
-     * 
-     * @return 
+     *
+     * @return
      * @param transStatus
      */
-     public void setTransactionStatus(String transStatus)
-     { 
+    public void setTransactionStatus(String transStatus)
+     {
          transactionError = transStatus;
      }
-     
+
     /**
      *  Create a String representation based on the Transactions Object
-     * 
+     *
      * @return String representation
      */
-    public String toString() 
-    {
+    public String toString() {
     	return ("\n Account number " + getAccountNumber() + " Account Balance " + getTransactionBalance() + " Message " + getTransactionError());
     }
-
 }
 
